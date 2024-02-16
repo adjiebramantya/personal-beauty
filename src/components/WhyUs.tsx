@@ -23,10 +23,10 @@ const whyUs = [
 
 export default function WhyUs() {
   return (
-    <div className="grid grid-cols-3 gap-4 place-items-center mx-80">
+    <div className="grid md:grid-cols-3 gap-4 place-items-center md:mx-[5%]">
       {whyUs.map((item) => {
         return (
-          <div className="text-center mx-[20%]">
+          <div className="text-center md:mx-[20%]">
             <img src={item.image} className="mx-auto w-[50%] block" alt="" />
             <p className="font-bold text-primary text-lg mb-3">{item.title}</p>
             <p className="font-light text-secondary">{item.description}</p>
