@@ -18,7 +18,10 @@ export default function Home() {
             pelayanan terbaik bagi kepuasan anda hingga mampu mendapatkan hasil
             yang sempurna.
           </p>
-          <Button typeButton="primary" className="font-medium text-xl mt-20">
+          <Button
+            typebutton="primary"
+            className="py-3 px-8 rounded-full font-medium text-xl mt-20"
+          >
             BELI SEKARANG
           </Button>
         </div>

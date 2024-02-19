@@ -29,7 +29,7 @@ export default function NavbarMain() {
         <Logo />
       </NavbarBrand>
       <NavbarContent className="hidden sm:flex gap-4" justify="center">
-        {menu.map((item) => {
+        {menu.map((item, index) => {
           const isActive = pathName === item.href;
           let inputProps;
           if (isActive) {
@@ -39,7 +39,7 @@ export default function NavbarMain() {
           }
 
           return (
-            <NavbarItem {...inputProps}>
+            <NavbarItem {...inputProps} key={index}>
               <Link
                 color={isActive ? undefined : "foreground"}
                 href={item.href}

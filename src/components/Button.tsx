@@ -3,36 +3,43 @@ import React from "react";
 import styled from "styled-components";
 
 type Props = {
-  typeButton: string;
+  typebutton: string;
 };
 
 const StyledButton = styled.button<Props>`
+  /* PRIMARY */
   background-color: ${(props) =>
-    props.typeButton === "primary" ? "#1A5632" : ""};
+    props.typebutton === "primary" ? "#1A5632" : ""};
 
-  color: ${(props) => (props.typeButton === "primary" ? "white" : "")};
+  color: ${(props) => (props.typebutton === "primary" ? "white" : "")};
+
+  /* SECONDARY */
+  background-color: ${(props) =>
+    props.typebutton === "secondary" ? "white" : ""};
+
+  border: ${(props) =>
+    props.typebutton === "secondary" ? "2px solid #1A5632" : ""};
+
+  color: ${(props) => (props.typebutton === "secondary" ? "#1A5632" : "")};
 `;
 
 StyledButton.defaultProps = {
-  typeButton: "primary",
+  typebutton: "primary",
 };
 
 type PropsButton = {
-  typeButton: "primary" | "secondary" | "third";
+  typebutton: "primary" | "secondary" | "third";
   children: React.ReactNode;
-  className?: string | null;
+  className?: string;
 };
 
 export default function Button({
-  typeButton,
+  typebutton,
   children,
   className,
 }: PropsButton) {
   return (
-    <StyledButton
-      typeButton={typeButton}
-      className={`py-3 px-8 rounded-full ${className}`}
-    >
+    <StyledButton typebutton={typebutton} className={`${className}`}>
       {children}
     </StyledButton>
   );

@@ -1,9 +1,25 @@
 import React from "react";
 import Product from "./Product";
 
-export default function ListProduct() {
+type ListProductProps = {
+  cols?: number;
+};
+
+export default function ListProduct({ cols = 4 }: ListProductProps) {
   return (
-    <div className="grid grid-cols-2 md:grid-cols-4 gap-4 place-items-center">
+    <div
+      className={`grid grid-cols-2 md:grid-cols-${cols} gap-4 place-items-center`}
+    >
+      <Product />
+      <Product />
+      <Product />
+      <Product />
+      <Product />
+      <Product />
+      <Product />
+      <Product />
+      <Product />
+      <Product />
       <Product />
       <Product />
       <Product />
