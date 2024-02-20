@@ -1,9 +1,12 @@
+import Image from "next/image";
 import React from "react";
 
 export default function Product() {
   return (
-    <div className="rounded-2xl inline w-fit p-5 hover:shadow-2xl">
-      <img src="/product.png" className="rounded md:h-60 md:w-60" alt="" />
+    <div className="rounded-2xl inline w-fit p-5 hover:shadow-xl md:hover:shadow-2xl">
+      <div className="md:h-60 md:w-60 relative">
+        <Image src="/product.png" fill={true} className="rounded" alt="" />
+      </div>
       <div className="md:flex md:justify-between mt-4">
         <div>
           <div className="text-primary font-medium text-xs md:font-semibold md:text-base">

@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 const whyUs = [
@@ -24,10 +25,12 @@ const whyUs = [
 export default function WhyUs() {
   return (
     <div className="grid md:grid-cols-3 gap-4 place-items-center md:mx-[5%]">
-      {whyUs.map((item) => {
+      {whyUs.map((item, index) => {
         return (
-          <div className="text-center md:mx-[20%]">
-            <img src={item.image} className="mx-auto w-[50%] block" alt="" />
+          <div className="text-center md:mx-[20%]" key={index}>
+            <div className="mx-auto w-[50%] block relative">
+              <Image src={item.image} fill={true} alt="" />
+            </div>
             <p className="font-bold text-primary text-lg mb-3">{item.title}</p>
             <p className="font-light text-secondary">{item.description}</p>
           </div>

@@ -25,11 +25,9 @@ export default function Home() {
             BELI SEKARANG
           </Button>
         </div>
-        <img
-          className="absolute right-0 bottom-0 w-[70%] md:w-[40%]"
-          src="/banner/Healthcare.png"
-          alt=""
-        />
+        <div className="absolute right-0 bottom-0 w-[70%] md:w-[40%]">
+          <Image fill={true} src="/banner/Healthcare.png" alt="" />
+        </div>
       </div>
       {/* Best Seller */}
       <div className="m-10 md:m-28">

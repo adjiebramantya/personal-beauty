@@ -13,16 +13,16 @@ export default function FilterProduct() {
   const [price, setPrice] = useState<SliderValue>([100000, 500000]);
 
   return (
-    <div className="rounded-xl p-6 shadow-xl">
+    <div className="rounded-xl p-6 shadow-xl w-[100%] h-[100%]">
       <div className="mb-10">
         <p className="text-secondary font-bold text-lg mb-3">Series</p>
-        <CheckboxGroup defaultValue={["buenos-aires", "london"]}>
+        <div className="grid grid-rows-1 grid-cols-2 md:grid-rows-5 md:grid-cols-1 gap-1">
           <Checkbox value="buenos-aires">Buenos Aires</Checkbox>
           <Checkbox value="sydney">Sydney</Checkbox>
           <Checkbox value="san-francisco">San Francisco</Checkbox>
           <Checkbox value="london">London</Checkbox>
           <Checkbox value="tokyo">Tokyo</Checkbox>
-        </CheckboxGroup>
+        </div>
       </div>
       <div className="mb-10">
         <p className="text-secondary font-bold text-lg mb-3">Price</p>
@@ -37,19 +37,19 @@ export default function FilterProduct() {
           value={price}
           className="max-w-md"
         />
-        <div className="flex my-5">
+        <div className="grid grid-cols-2 gap-3 md:grid-cols-3 my-5">
           {Array.isArray(price) &&
             price.map((b, index) => (
-              <span
-                className="bg-primary p-3 text-white mx-2 font-semibold text-sm"
+              <div
+                className="bg-primary p-3 text-white font-semibold text-sm text-center"
                 key={index}
               >
                 {currency(b)}
-              </span>
+              </div>
             ))}
           <Button
             typebutton="secondary"
-            className=" ms-auto py-2 px-5 rounded-md font-semibold"
+            className="py-2 px-5 rounded-md font-semibold"
           >
             Filter
           </Button>
@@ -57,16 +57,13 @@ export default function FilterProduct() {
       </div>
       <div className="mb-10">
         <p className="text-secondary font-bold text-lg my-3">Type</p>
-        <CheckboxGroup
-          defaultValue={["buenos-aires", "london"]}
-          className="mb-10"
-        >
+        <div className="grid grid-rows-1 grid-cols-2 md:grid-rows-5 md:grid-cols-1 gap-1 mb-10">
           <Checkbox value="buenos-aires">Buenos Aires</Checkbox>
           <Checkbox value="sydney">Sydney</Checkbox>
           <Checkbox value="san-francisco">San Francisco</Checkbox>
           <Checkbox value="london">London</Checkbox>
           <Checkbox value="tokyo">Tokyo</Checkbox>
-        </CheckboxGroup>
+        </div>
       </div>
     </div>
   );
