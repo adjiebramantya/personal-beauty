@@ -2,6 +2,7 @@ import Button from "@/components/Button";
 import ListProduct from "@/components/ListProduct";
 import WhyUs from "@/components/WhyUs";
 import Image from "next/image";
+import Link from "next/link";
 
 export default function Home() {
   return (
@@ -25,7 +26,7 @@ export default function Home() {
             BELI SEKARANG
           </Button>
         </div>
-        <div className="absolute right-0 bottom-0 w-[70%] md:w-[40%]">
+        <div className="absolute right-0 bottom-0 h-[50%] md:h-[100%] w-[70%] md:w-[40%]">
           <Image fill={true} src="/banner/Healthcare.png" alt="" />
         </div>
       </div>
@@ -62,7 +63,7 @@ export default function Home() {
           </div>
           <div>
             <p className="text-third font-semibold text-sm md:text-base">
-              VIEW ALL {">"}
+              <Link href="/products">VIEW ALL {">"}</Link>
             </p>
           </div>
         </div>

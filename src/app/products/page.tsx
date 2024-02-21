@@ -29,7 +29,9 @@ export default function Product() {
           )}
         </div>
         {filter && (
-          <div className="w-[100%] h-screen left-0 overflow-auto fixed z-10 bg-white">
+          <div
+            className={`w-[100%] h-screen left-0 overflow-auto fixed z-10 bg-white`}
+          >
             <FilterProduct />
           </div>
         )}

@@ -4,7 +4,7 @@ import React from "react";
 export default function Product() {
   return (
     <div className="rounded-2xl inline w-fit p-5 hover:shadow-xl md:hover:shadow-2xl">
-      <div className="md:h-60 md:w-60 relative">
+      <div className="w-32 h-32 md:h-60 md:w-60 relative">
         <Image src="/product.png" fill={true} className="rounded" alt="" />
       </div>
       <div className="md:flex md:justify-between mt-4">

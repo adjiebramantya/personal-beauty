@@ -28,7 +28,7 @@ export default function WhyUs() {
       {whyUs.map((item, index) => {
         return (
           <div className="text-center md:mx-[20%]" key={index}>
-            <div className="mx-auto w-[50%] block relative">
+            <div className="mx-auto w-[137px] h-[137px] block relative">
               <Image src={item.image} fill={true} alt="" />
             </div>
             <p className="font-bold text-primary text-lg mb-3">{item.title}</p>
